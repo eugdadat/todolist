@@ -78,24 +78,24 @@ const styles = {
     margin: "50px auto",
     padding: "20px",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif", // Corrected the font family
-    backgroundColor: "#f4f4f4",     // Added background color for contrast
-    borderRadius: "10px",           // Added border radius for rounded corners
+    fontFamily: "Arial, sans-serif",
+    backgroundColor: "#f4f4f4",
+    borderRadius: "10px",
   },
   input: {
     width: "100%",
     padding: "10px",
-    margin: "10px 0",  // Fixed typo "marginhing" to "margin"
+    margin: "10px 0",
     borderRadius: "5px",
-    border: "1px solid #ccc",  // Added border for better visibility
-    fontSize: "16px",          // Set font size for input fields
+    border: "1px solid #ccc",
+    fontSize: "16px",
   },
   button: {
-    padding: "10px 20px",     // Horizontal padding for better look
-    cursor: "pointer",        // Cursor pointer to indicate clickability
-    border: "none",           // Removed border for button
-    borderRadius: "5px",      // Rounded corners for button
-    backgroundColor: "#28a745", // Green background color
-    color: "white",           // Bold white text for the button
+    padding: "10px 20px",
+    cursor: "pointer",
+    border: "none",
+    borderRadius: "5px",
+    backgroundColor: "#28a745",
+    color: "white",
   },
 };
