@@ -78,21 +78,24 @@ const styles = {
     margin: "50px auto",
     padding: "20px",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif", // Corrigido para uma fonte válida
-  },
-  inputdh: {
-    width: "100%",
-    padding: "10px",
-    margin: "10px 0",
-    borderRadius: "5px",
+    fontFamily: "Arial, sans-serif", // Corrected the font family
+    backgroundColor: "#f4f4f4",     // Added background color for contrast
+    borderRadius: "10px",           // Added border radius for rounded corners
   },
   input: {
     width: "100%",
     padding: "10px",
-    margin: "10px 0",  // Corrigido o erro de digitação "marginhing" para "margin"
+    margin: "10px 0",  // Fixed typo "marginhing" to "margin"
+    borderRadius: "5px",
+    border: "1px solid #ccc",  // Added border for better visibility
+    fontSize: "16px",          // Set font size for input fields
   },
   button: {
-    padding: "10px",
-    cursor: "pointer",
+    padding: "10px 20px",     // Horizontal padding for better look
+    cursor: "pointer",        // Cursor pointer to indicate clickability
+    border: "none",           // Removed border for button
+    borderRadius: "5px",      // Rounded corners for button
+    backgroundColor: "#28a745", // Green background color
+    color: "white",           // Bold white text for the button
   },
 };
