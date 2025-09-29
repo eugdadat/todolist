@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TodoList from "./TodoList.js";  // Corrigido o caminho da importação
+import TodoList from "./TodoList.js";  // Corrected the import path
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -7,7 +7,7 @@ export default function App() {
   const [date, setDate] = useState(""); 
   const [hora, setHora] = useState("");
 
-  // Função para adicionar uma nova tarefa
+  // Function to add a new task
   const addTask = () => {
     if (!text || !date || !hora) {
       alert("Todos os campos precisam ser preenchidos!");
@@ -28,42 +28,71 @@ export default function App() {
     setHora("");
   };
 
-  // Função para remover uma tarefa
+  // Function to remove a task
   const removeTask = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
-    <div>
+    <div style={styles.container}>
       <h1>Lista de Tarefas</h1>
 
-      {/* Campo para digitar o texto da nova tarefa */}
+      {/* Field to input new task */}
       <input
         type="text"
         placeholder="Nova Tarefa"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        style={styles.input}
       />
 
-      {/* Campo para selecionar a data da tarefa */}
+      {/* Field to select task date */}
       <input
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
+        style={styles.input}
       />
 
-      {/* Campo para selecionar a hora da tarefa */}
+      {/* Field to select task time */}
       <input
         type="time"
         value={hora}
         onChange={(e) => setHora(e.target.value)}
+        style={styles.input}
       />
 
-      {/* Botão para adicionar a tarefa */}
-      <button onClick={addTask}>Adicionar Tarefa</button>
+      {/* Button to add task */}
+      <button onClick={addTask} style={styles.button}>Adicionar Tarefa</button>
 
-      {/* Exibição da lista de tarefas */}
-      <TodoList todos={todos} removeTask={removeTask} /> {/* Passando a lista de tarefas e a função de remoção para o TodoList */}
+      {/* Display the list of tasks */}
+      <TodoList todos={todos} removeTask={removeTask} />
     </div>
   );
 }
+
+// Styles for the components
+const styles = {
+  container: {
+    maxWidth: "600px",
+    margin: "50px auto",
+    padding: "20px",
+    textAlign: "center",
+    fontFamily: "Arial, sans-serif", // Corrigido para uma fonte válida
+  },
+  inputdh: {
+    width: "100%",
+    padding: "10px",
+    margin: "10px 0",
+    borderRadius: "5px",
+  },
+  input: {
+    width: "100%",
+    padding: "10px",
+    margin: "10px 0",  // Corrigido o erro de digitação "marginhing" para "margin"
+  },
+  button: {
+    padding: "10px",
+    cursor: "pointer",
+  },
+};
